@@ -2,6 +2,9 @@ from flask import Flask
 from backned.database.database import db
 from flask_socketio import SocketIO
 from views import message_view
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret!"
