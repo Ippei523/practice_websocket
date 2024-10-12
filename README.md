@@ -15,3 +15,9 @@
   - BE: Python, Flask
 - 開発環境
   - Mac
+
+## 環境構築方法
+
+### backend編
+
+1. pip install flask flask_socketio
