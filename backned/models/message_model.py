@@ -1,4 +1,4 @@
-from database import db
+from backned.database.database import db
 from flask_sqlalchemy import SQLAlchemy
 
 

@@ -1,5 +1,5 @@
 from flask import Flask
-from database import db
+from backned.database.database import db
 from flask_socketio import SocketIO
 from views import message_view
 
