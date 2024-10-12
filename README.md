@@ -20,4 +20,10 @@
 
 ### backend編
 
-1. pip install flask flask_socketio
+1. ```cp .env.sample .env```のコマンドを実行して、.envファイルを作成する
+2. .envファイルに必要な情報を記述する
+   - .envファイルは秘匿ファイルを記述するためのファイルです
+   - こちらにはローカルの情報を書き、git上には上げないようにしましょう
+3. ```python3 -m venv venv```でPythonの仮想環境をプロジェクトディレクトリへ移動させる(環境によっては、```python -m venv venv```で実行できる。alias次第)
+4. ```pip install -r requirements.txt```でプロジェクトに必要なパッケージをすべてインストールする
+5. ```python3 main.py```のコマンドを実行して、Runnning on <http://127.0.0.1:5500>と出れば成功です
