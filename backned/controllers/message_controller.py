@@ -1,5 +1,5 @@
 from flask_socketio import Namespace, emit
-from backned.models.message_model import Message, db
+from models.message_model import Message, db
 
 
 class MessageController(Namespace):

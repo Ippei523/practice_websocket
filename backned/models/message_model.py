@@ -1,6 +1,5 @@
+from database import db
 from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
 
 
 class Message(db.Model):
