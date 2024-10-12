@@ -1,7 +1,7 @@
-from flask import Flask, render_template
-from backned.models.message_model import db
-from flask_socketio import SocketIO, emit
-from backned.views import message_view
+from flask import Flask
+from database import db
+from flask_socketio import SocketIO
+from views import message_view
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret!"
