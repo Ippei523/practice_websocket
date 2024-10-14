@@ -3,7 +3,8 @@
 .PHONY: start
 start:
 	@echo "Starting server..."
-	@sh ./scripts/start.sh
+	@sh ./scripts/frontend-start.sh &
+	@sh ./scripts/backend-start.sh
 	@echo "Server started!"
 
 .PHONY: init-db
