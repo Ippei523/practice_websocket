@@ -1,5 +1,4 @@
 from database.database import db
-from flask_sqlalchemy import SQLAlchemy
 
 
 class Message(db.Model):
