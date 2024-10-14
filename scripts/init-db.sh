@@ -1,8 +1,16 @@
 #!/bin/bash
 
-POSTGRES_USER="tech"
-POSTGRES_PASSWORD="tech"
-POSGRES_DB="sample_message_db"
+if [ -f ./scripts/.env ]; then
+  source ./scripts/.env
+else
+  echo "No .env file found"
+  exit 1
+fi
+
+# show the variables
+echo "POSTGRES_USER: $POSTGRES_USER"
+echo "POSTGRES_PASSWORD: $POSTGRES_PASSWORD"
+echo "POSGRES_DB: $POSGRES_DB"
 
 # Start the Postgres service
 brew services start postgresql
