@@ -3,9 +3,6 @@ from database.database import db
 from database.config import Config
 from flask_socketio import SocketIO
 from views import message_view
-from dotenv import load_dotenv
-
-load_dotenv()
 
 app = Flask(__name__)
 app.config.from_object(Config)
