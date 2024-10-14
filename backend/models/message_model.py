@@ -3,6 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 class Message(db.Model):
+    __tablename__ = "message"
+
     id = db.Column(db.Integer, primary_key=True)
     message = db.Column(db.String(200), nullable=False)
     date = db.Column(db.DateTime, nullable=False)
