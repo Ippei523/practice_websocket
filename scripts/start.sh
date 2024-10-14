@@ -27,5 +27,5 @@ then
     exit 1
 fi
 
-# アプリケーションが起動したことを確認
-echo "Application started"
+# バックエンドアプリケーションが起動したことを表示
+echo "Backend application started"
