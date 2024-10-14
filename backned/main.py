@@ -1,5 +1,6 @@
 from flask import Flask
-from backned.database.database import db
+from database.database import db
+from database.config import Config
 from flask_socketio import SocketIO
 from views import message_view
 from dotenv import load_dotenv
@@ -7,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "secret!"
+app.config.from_object(Config)
 db.init_app(app)
 socketio = SocketIO(app)
 
@@ -19,5 +20,8 @@ socketio.on_namespace(message_view.MessageController("/message"))
 
 
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+
     # 開発用サーバとしてeventletを使用
-    socketio.run(app, host="0.0.0.0", port=5000, debug=True)
+    socketio.run(app, host="0.0.0.0", port=5500, debug=True)
