@@ -3,9 +3,12 @@ from database.database import db
 from database.config import Config
 from flask_socketio import SocketIO
 from views import message_view
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config.from_object(Config)
+
+Migrate(app, db)
 db.init_app(app)
 socketio = SocketIO(app)
 
