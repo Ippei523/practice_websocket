@@ -30,4 +30,5 @@
    - こちらにはローカルの情報を書き、git上には上げないようにしましょう
 3. ```python3 -m venv venv```でPythonの仮想環境をプロジェクトディレクトリへ移動させる(環境によっては、```python -m venv venv```で実行できる。alias次第)
 4. ```pip install -r requirements.txt```でプロジェクトに必要なパッケージをすべてインストールする
-5. ```python3 main.py```のコマンドを実行して、Runnning on <http://127.0.0.1:5500>と出れば成功です
+5. ```source venv/bin/activate```で仮想環境の中に入る
+6. ```python3 main.py```のコマンドを実行して、Runnning on <http://127.0.0.1:5500>と出れば成功です
