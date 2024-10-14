@@ -21,5 +21,11 @@ pip install -r requirements.txt
 
 # アプリケーションを起動
 echo "Starting the application ..."
-python3 main.py
+if ! python3 main.py
+then
+    echo "Failed to start the application"
+    exit 1
+fi
+
+# アプリケーションが起動したことを確認
 echo "Application started"
